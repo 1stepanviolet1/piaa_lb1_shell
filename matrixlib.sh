@@ -128,5 +128,12 @@ set_cells_from_square() {
 place_square() {
     local res=$( call set_cells_from_square $1 $2 $3 1 $4 ) 
     echo ${res[@]}
-
 }
+
+
+remove_square() {
+    local res=$( call set_cells_from_square $1 $2 $3 0 $4 )
+    echo ${res[@]}
+}
+
+
